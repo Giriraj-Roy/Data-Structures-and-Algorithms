@@ -22,7 +22,7 @@ int main()
         int dragon_sum=0;
         dragon_sum= accumulate(dragon, dragon+3, dragon_sum);
         int sloth_sum=0;
-        sloth_sum= accumulate(sloth_sum, sloth_sum+3, sloth_sum);
+        sloth_sum= accumulate(sloth, sloth+3, sloth_sum);
         if(sloth_sum >= dragon_sum){
             if(sloth_sum > dragon_sum){
                 cout << "SLOTH" <<"\n";
@@ -31,6 +31,10 @@ int main()
             {
                 for (int i = 0; i < 3; i++)
                 {
+                    if(i==2 & sloth[i] == dragon[i]){
+                        cout << "TIE" << "\n";
+                        break;
+                    }
                     if(sloth[i] == dragon[i]){
                         continue;
                     }
@@ -46,7 +50,7 @@ int main()
         else{
             cout << "DRAGON" << "\n";
         }
-
+    }
 
 
 	return 0;
