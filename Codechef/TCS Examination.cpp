@@ -40,9 +40,11 @@ int main()
                     }
                     else if(sloth[i] > dragon[i]){
                         cout << "SLOTH" <<"\n";
+                        break;
                     }
-                    else{
+                    else if(sloth[i] < dragon[i]){
                         cout << "DRAGON" << "\n";
+                        break;
                     }
                 }
             }
