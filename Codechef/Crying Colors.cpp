@@ -10,19 +10,15 @@ int main()
     while(t--)
     {
         int n; cin >>  n;
-        int arr[n][n];
-        int max=0;
-        for (int i = 0; i < n; i++)
+        int arr[3][3];
+        for (int i = 0; i < 3; i++)
         {
-            for(int j = 0; j < n; j++){
+            for(int j = 0; j < 3; j++){
                 cin >> arr[i][j];
-                if(i==j & ((n-arr[i][j])> max) ){
-                    max = n-arr[i][j];
-                }
             }
 
         }
-        cout << max << "\n";
+        cout << max(arr[0][1]+arr[0][2]+arr[1][2],arr[1][0]+arr[2][0]+arr[2][1]) << "\n";
 
     }
 
